@@ -1,0 +1,148 @@
+% ============================================================================
+% MASTER RESUME - comprehensive source, NOT a 1-page tailored output.
+% /apply builds cv/main_<company>_<role>.tex from this by cutting + reframing.
+% Tailored outputs MUST be exactly 1 page (see 05-cv-templates.md).
+% Compile: pdflatex (twice). Section order fixed: Skills, Projects, Experience, Education.
+% ============================================================================
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-1pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=-3pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%------------------------------------------------------------------------------
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Your Name} \\ \vspace{1pt}
+    \small [Phone] $|$
+    \href{mailto:you@example.com}{\underline{you@example.com}} $|$
+    \href{https://www.linkedin.com/in/yourhandle/}{\underline{linkedin.com/yourhandle}} $|$
+    \href{https://github.com/yourhandle}{\underline{Github}} $|$
+    \href{https://yourportfolio.example}{\underline{Portfolio}}
+\end{center}
+
+%----------- TECHNICAL SKILLS -----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    {\textbf{Languages}: e.g. Python, Java, SQL, JavaScript}\\
+    {\textbf{Category}: your relevant tools/frameworks here}\\
+    {\textbf{Category}: your relevant tools/frameworks here}
+    }}
+\end{itemize}
+
+%----------- PROJECTS -----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Project Name} $|$ \emph{Tech, Stack, Here}}{}
+      \resumeItemListStart
+        \resumeItem{What you built, the scale/scope, and a quantified outcome.}
+        \resumeItem{A second bullet with another concrete result.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Second Project} $|$ \emph{Tech, Stack, Here}}{}
+      \resumeItemListStart
+        \resumeItem{What you built, the scale/scope, and a quantified outcome.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------- EXPERIENCE -----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Job Title}{Jan 2025 - May 2025}
+      {Company Name}{City, Province}
+      \resumeItemListStart
+        \resumeItem{What you did and the measurable result.}
+        \resumeItem{A second bullet with another measurable result.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------- EDUCATION -----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Your University}{City, Province}
+      {Your Degree}{Expected Month Year}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework}: list a few relevant courses}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}

@@ -1,0 +1,91 @@
+# Secrets
+.env
+.env.*
+*.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node / bun
+node_modules/
+bun.lock
+.agents/**/node_modules/
+.agents/**/*.log
+
+# Compiled documents (build artifacts)
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Tailored application output from /apply.
+# This repo commits the tailored .tex sources + the renamed root PDFs + the posting
+# archive as application history (like the old single-file workflow did). Only the
+# per-build PDFs and extracted text under cv/ and cover_letters/ are ignored.
+cv/main_*.pdf
+cv/*.txt
+cover_letters/cover_*.pdf
+cover_letters/Cover_*.pdf
+
+# Personal job-search state
+job_scraper/
+gmail_sync/
+reports/
+upskill/*.md
+**/upskill/report-*.md
+company_research/*.json
+salary_data.json
+
+# documents/ - only README and folder structure tracked
+documents/cv/**
+documents/linkedin/**
+documents/diplomas/**
+documents/references/**
+documents/postings/**
+documents/interview/**
+!documents/**/.gitkeep
+!documents/**/README.md
+# documents/applications/ IS committed (application history: job_posting.md per
+# role). /interview prep packs land there too - ignore only those.
+documents/applications/**/interview_prep_*.md
+
+# Claude Code user-specific memory (lives under ~/.claude, but guard anyway)
+.claude/projects/
+skills-lock.json
+
+# Old single-file workspace transcripts kept locally, not shared
+youtube-transcript/
+
+# Personal outreach templates, local only
+linkedin_outreach_templates.md
+
+# Coffee chat / networking notes, local only
+networking_notes.md
+
+cv/*
+
+cover_letters/*
+
+documents/*
+
+portfolio_inspiration/*
+
+.DS_Store
+
+# Pipelines diagrams
+pipeline_diagram.html
+
+skills/Interview-skills/*
+.claude/skills/Interview-skills/ 
